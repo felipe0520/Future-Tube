@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+/*Cabeçalho*/
+header{
+    display: flex;
+    height: 12vh;
+    width: 100vw;
+    background-color: orange;
+    justify-content: space-between;
+}
+header>h1{
+    text-align: start;
+    margin: auto 0;
+}
+header>input{
+    text-align: center;
+    height: 3vh;
+    margin: auto 0;
+}
+header.button{
+    align-items: center;
+    margin: auto 0;
+}
+/*Menu Lateral*/
+.menu-flex{
+    display: flex;
+    flex-direction: row;
+}
+.menu-ul{
+    border-right: 3px solid grey;
+    height: 79vh;
+    margin: 0;
+}
+.menu-ul>li{
+    margin: 0 7vh 2vh 0;
+    list-style: none;
+    font-weight: 100;
+}
+.border-bottom{
+    border-bottom: 2px solid rgba(128, 128, 128, 0.418);
+    width: 100%;
+}
+.menu-ul>a{
+    text-decoration: none;
+    font-weight: 100;
+    color: black;
+    margin: 0 7vh 2vh 0;
+    list-style: none;
+}
+/* Main*/
+.container{
+    display: grid;
+    height: 70vh;
+    width: 94vw;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(4, 1fr) ;
+    row-gap: 4vw;
+    column-gap: 4vw;
+    margin: 3vw 3vw 0 1vw;
+}
+.media-box {
+    position: relative;
+    border: 1px solid green;
+}
+.media-box .title {
+    position: absolute;
+    width: calc(100% - 5px);
+    background: rgba(255, 255, 255);
+    color: black;
+    height: 20%;
+    bottom: 0;
+    align-items: center;
+    padding-left: 5px;
+}
+img{
+    width: 100%;
+}
+footer{
+    width: 100vw;
+    height: 8vh;
+    background-color: grey;
+    margin:auto;
+    color: white;
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid orange;
+}
+/*Configuração da página de vídeo */
+.mainVideo{
+    height: 50vh;
+    margin: 2vh 2vh 0 2vh
+}
+video{
+    margin:  0 auto;
+    height: 100%;
+}
+.tituloVideo{
+    text-align: left;
+    margin: 0;
+}
+.info-video{
+    position: relative;
+}
+.button-video{
+    position: absolute;
+    left: 78%;
+    top: 0;
+}
+/*Responsividade */
+@media screen and (max-width: 700px){
+    .container{
+        height: 250vh;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(8, 1fr);
+        row-gap: 8vw;
+    }
+    img{
+        width: 100%;
+    }
+    footer{
+        position: relative;
+        font-size:1.2em ;
+        top:25vh
+    }
+    video{
+        height: 35vh;
+    }
+    .responsive-video{
+       position: relative;
+       right: 68vw;
+       top: 45vh;
+       width: 50vw;
+    }
+    .menu-ul{
+        height: 120vh;
+    }
+}
